@@ -16,12 +16,17 @@ const Login = props => {
         }
     });
 
-        // document.getElementById("password").handleClick = function (e) {
-        //     e.preventDefault();
-        //     if (e.keyCode === 13) {
-        //         document.getElementById("boton").click();
-        //     }
-        // }
+    const handleClick = (event) => {
+
+        document.getElementById("password").handleClick = function (e) {
+            e.preventDefault();
+            if (e.keyCode === 13) {
+                document.getElementById("boton").click();
+            }
+        }
+    }
+
+    //e => actions.getLogin(e, '/login', props.history)
 
     return (
         <div className="container">
@@ -54,7 +59,7 @@ const Login = props => {
                             </div>
                         </div>
                         <div className="card-footer">
-                            <button id="boton" className="btn btn-dark btn-block" onClick={e => actions.getLogin(e, '/login', props.history)}>Ingresar</button>
+                            <button id="boton" className="btn btn-dark btn-block" onClick={handleClick}>Ingresar</button>
                         </div>
                     </div>
                 </div>

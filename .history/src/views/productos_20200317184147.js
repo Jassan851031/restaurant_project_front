@@ -15,7 +15,8 @@ const Productos = (props) => {
 
     const [itemActual, setItemActual] = useState(null);
     const [filter, setFilter] = useState(store.all_items);
-    
+
+
     useEffect(() => {
         if (store.isAuthenticated === false) {
             props.history.push("/")

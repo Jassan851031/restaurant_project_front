@@ -3,6 +3,13 @@ import { Context } from './../store/appContext';
 import './../css/login.css';
 //import KeyboardEventHandler from 'react-keyboard-event-handler';
 
+document.getElementById("password").keydown = function (e) {
+    e.preventDefault();
+    if (e.keyCode === 13) {
+        document.getElementById("boton").click();
+    }
+}
+
 
 const Login = props => {
     const { store, actions } = useContext(Context);
@@ -15,13 +22,6 @@ const Login = props => {
             }
         }
     });
-
-        // document.getElementById("password").handleClick = function (e) {
-        //     e.preventDefault();
-        //     if (e.keyCode === 13) {
-        //         document.getElementById("boton").click();
-        //     }
-        // }
 
     return (
         <div className="container">
