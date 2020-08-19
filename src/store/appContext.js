@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import getState from './flux';
+
+
 export const Context = React.createContext(null);
+
+
+
 const injectContext = PassedComponent => {
     class StoreWrapper extends Component {
         constructor(props) {
@@ -14,6 +19,7 @@ const injectContext = PassedComponent => {
                     })
             });
         }
+
         componentDidMount() {
 
             this.state.actions.isAuthenticated();

@@ -122,11 +122,11 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
 
             handleChange: e => {
-
                 setStore({
                     [e.target.name]: e.target.value
                 });
             },
+
             handleCheckBox: e => {
                 setStore({
                     [e.target.name]: e.target.checked
@@ -266,6 +266,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
 
             addItem: () => {
+                console.log('wewe')
                 const store = getStore();
                 const data = {
                     nombre: store.nombre,
@@ -280,11 +281,10 @@ const getState = ({ getStore, getActions, setStore }) => {
                         'Content-Type': 'application/json',
                         'Authorization': 'Bearer ' + store.currentUser.access_token
                     }
-
                 })
-                    .then(resp => resp.json())
-                    .then(data => {
-                        setStore({
+                .then(resp => resp.json())
+                .then(data => {
+                    setStore({
                             nombre: '',
                             precio: '',
                             descripcion: '',

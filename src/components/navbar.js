@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav d-flex justify-content-center">
                 <li className="nav-item active">
-                  <Link className="nav-link">Bienvenido a RestaurAPP</Link>
+                  <h2 className="nav-link">Bienvenido a RestaurAPP</h2>
                 </li>
               </ul>
             </div>

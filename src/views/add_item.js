@@ -5,6 +5,7 @@ import './../css/add_item.css';
 
 const Add_item = () => {
     const { store, actions } = useContext(Context);
+    console.log(store.nombre);
 
     return (
         <div className="modal fade" id="additem" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -51,7 +52,7 @@ const Add_item = () => {
                                     </select>
                                 </div>
                                 <div className=" col-5">
-                                <label for="formGroupExampleInput">Descripcion</label>
+                                    <label for="formGroupExampleInput">Descripcion</label>
                                     <textarea rows="10" cols="20" value={store.descripcion} name="descripcion" onChange={e => actions.handleChange(e)}></textarea>
                                 </div>
                             </div>
